@@ -8,6 +8,7 @@
   <body>
 
         <?php
+            session_start();
             $username=$_POST['username'];
             $password=$_POST['password'];
             $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 

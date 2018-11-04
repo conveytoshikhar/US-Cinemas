@@ -8,8 +8,11 @@
   <body>
 
         <?php
+
+            session_start();
             $username=$_POST['username'];
             $password=$_POST['password'];
+           
             $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
                     or die("Error is "+mysqli_connect_error());
 
@@ -20,18 +23,30 @@
 
             if(mysqli_num_rows($user_record)>0){
                 $entry=mysqli_fetch_array($user_record);
-                if($entry['password']==$password){
-                    echo "<h1>Success.</h1>";
-                }
-                else{
+                if($entry['password']==$password){ 
+                    $_SESSION['username']=$username;
+                    session_write_close();
+                    header('location:main.php');
+                }else{
                         echo "<h1> Invalid login, please login again. </h1>";
+                        destroySession();
                         echo "<script>".$returnToIndexScript."</script>"; 
                 }
             }else{
             
                 echo "<h1> Invalid login, please login again. </h1>";
+                destroySession();
                 echo "<script>".$returnToIndexScript."</script>";
-            }    
+            }
+            
+            
+            function destroySession(){
+                if(isset($_COOKIE[session_name()])){
+                    setcookie(session_name(),'',time()-3600,'/');
+                }
+                session_unset();
+                session_destroy();
+            }
         ?>
 
     </body>
