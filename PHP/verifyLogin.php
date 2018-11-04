@@ -1,1 +1,5 @@
-echo "Received"
+<?php
+
+    echo "received"
+
+?>
