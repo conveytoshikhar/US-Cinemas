@@ -2,16 +2,21 @@
 <html>
   <head>
   <meta charset="utf-8"/>
-    <title>Create User</title>
+    <title>US Cinemas</title>
   </head>
 
   <body>
-        <h1>Youre here</h1>
+
         <?php
             session_start();
             
             if(isAuthenticated()){
-                echo "<h1> Youre good to go buddy </h1>";
+                echo "<ul>";
+                echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
+                echo "<li><a href='comment.php'>Movie Review</a></li>";
+                echo "<li><a href='history.php'>Purchase History</a></li>";
+                echo "<li><a href='logout.php'>Logout</a></li>";
+                echo "<ul>";
             }else{
                 echo "<h1> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";

@@ -30,7 +30,7 @@
                 }else{
                         echo "<h1> Invalid login, please login again. </h1>";
                         destroySession();
-                        echo "<script>".$returnToIndexScript."</script>"; 
+                        echo "<script>".$returnToIndexScript."</script>";
                 }
             }else{
             
@@ -46,6 +46,7 @@
                 }
                 session_unset();
                 session_destroy();
+          
             }
         ?>
 
