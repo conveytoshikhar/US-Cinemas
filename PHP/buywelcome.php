@@ -43,8 +43,30 @@
                         echo "<p>";
                         echo "Language: ".$film['languageFilm'];
                         echo "</p>";
-                        echo "</div>";
 
+                        // here the show timings will go for the current movie
+                        $query="SELECT * FROM broadcast WHERE filmid='".$film['filmid']."'";
+                        $broadcast_items=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
+                        if(mysqli_num_rows($broadcast_items)>0){
+                            echo "<form id='form' method='POST' action='seatplantry.php'>";
+                            echo '<select name="chosen" size="1">';
+                            while($broad_item=mysqli_fetch_array($broadcast_items)){
+                                $houseid=convertHouseName($broad_item['houseid']);
+                                $date=$broad_item['date'];
+                                $filmname=$film['filmname'];
+                                $category=$film['category'];
+                                $time=$broad_item['time'];
+                                $day=$broad_item['day'];
+                                $displayitem= $date." ".$time." (".$day.") "."House ".$houseid;
+                                echo "<option  value='date=$date&time=$time&film=$filmname&house=$houseid&category=$category&day=$day' >".$displayitem.'</option>';
+                            }
+                            echo '</select>';
+                            echo '<input type="submit" value="submit">';
+                            echo '</form>';
+                        }
+
+                        echo "</div>";
+                        
                         echo "<hr>";
 
                     }
@@ -59,16 +81,22 @@
 
 
 
+            function convertHouseName($houseid){
+                $house='A';
+                for($i=1;$i<$houseid;$i++){
+                    $house++;
+                }
+                return $house;
+            }
 
 
-
-          function isAuthenticated(){
-              if(isset($_SESSION['username'])){
-                    return true;
-              }else{
-                    return false;
-              }
-          }
+            function isAuthenticated(){
+                if(isset($_SESSION['username'])){
+                        return true;
+                }else{
+                        return false;
+                }
+            }
         ?>
 
     </body>
