@@ -27,16 +27,22 @@
                 if(mysqli_num_rows($film_records)>0){
                     while($film=mysqli_fetch_array($film_records)){
                         echo "<div id='cardview'> ";
+                        echo "<p>";
                         echo "Title: ".$film['filmname'];
-                        echo "<br/>";
+                        echo "</p>";
+                        echo "<img src='../Assets/".$film['poster']."' alt='image poster'/>";
+                        echo "<p>";
                         echo "Synopsis: ".$film['description'];
-                        echo "<br/>";
+                        echo "</p>";
+                        echo "<p>";
                         echo "Director: ".$film['director'];
-                        echo "<br/>";
+                        echo "</p>";
+                        echo "<p>";
                         echo "Category: ".$film['category'];
-                        echo "<br/>";
+                        echo "</p>";
+                        echo "<p>";
                         echo "Language: ".$film['languageFilm'];
-                        echo "<br/>";
+                        echo "</p>";
                         echo "</div>";
 
                         echo "<hr>";
