@@ -14,7 +14,7 @@
                     or die("Error is "+mysqli_connect_error());
 
             $query="SELECT * FROM login where userid= '$username'";  
-            $returnToIndexScript= 'setTimeout( ()=>{window.location.replace("../HTML/index.html")}, 3000)';
+            $returnToIndexScript= 'setTimeout( ()=>{window.location.replace("../index.html")}, 3000)';
 
             $user_record=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
 
