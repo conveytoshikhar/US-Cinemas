@@ -31,7 +31,7 @@
             
                 echo "<h1> Invalid login, please login again. </h1>";
                 echo "<script>".$returnToIndexScript."</script>";
-            }
+            }    
         ?>
 
     </body>

@@ -11,7 +11,7 @@ passwordField.onblur=()=>{password=passwordField.value}
 
 signUpBtn.onclick=sendCreateRequest
 
-backBtn.onclick=()=>{window.location.replace("../HTML/index.html")}
+backBtn.onclick=()=>{window.location.replace("index.html")}
 
 
 

@@ -10,7 +10,7 @@ passwordField.onblur=()=>{password=passwordField.value}
 
 submitBtn.onclick=sendLoginRequest
 console.log(submitBtn)
-createAccountBtn.onclick=()=>{window.location.replace("../HTML/createaccount.html")}
+createAccountBtn.onclick=()=>{window.location.replace("createaccount.html")}
 
 
 
