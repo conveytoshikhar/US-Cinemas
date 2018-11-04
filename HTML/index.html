@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+    <title>Login</title>
+  </head>
+
+  <body>
+  	<h1>US CINEMAS</h1>
+    <!-- inner card view for login and password and the two buttons  -->
+    <div id="innerCardView">
+
+      <form id="form" method="POST" action="../PHP/verifyLogin.php">
+        <input id="username" type="text" name="username" placeholder="Username" maxlength="40"><br>
+        <input id="password" type="password" name="password" placeholder="Password" maxlength="20"><br>
+      </form>
+        <button id="submit">SUBMIT</button><br/>
+        <button id="createAccount">CREATE AN ACCOUNT</button>
+    </div>
+
+
+
+    <script src="../Javascript/loginScript.js"></script>
+  </body>
+</html>

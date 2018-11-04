@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+    <title>Create Account</title>
+  </head>
+
+  <body>
+        <h1>Welcome To US Cinemas, Lets get you signed up..</h1>
+        <!-- inner card view for login and password and the two buttons  -->
+        <div id="innerCardView">
+          <form id="form" method="POST" action="../PHP/create.php">
+            <label for="username">Username</label><br/>
+            <input id="username" type="text" name="username" placeholder="Desired Username"><br>
+            <label for="password">Password</label><br/>
+            <input id="password" type="password" name="password" placeholder="Your Password"><br>
+          </form>
+          <button id="signUp">Sign Up</button><br/>
+          <button id="back">Back</button>
+        </div>
+
+
+
+        <script src="../Javascript/createAccount.js"></script>
+    </body>
+</html>
