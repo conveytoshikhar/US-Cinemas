@@ -18,6 +18,8 @@ createAccountBtn.onclick=()=>{window.location.replace("../HTML/createaccount.htm
 
 
 
+
+
 function sendLoginRequest(){
     console.log(username+"   "+password)
     if(username==''|| password==''){
