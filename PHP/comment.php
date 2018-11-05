@@ -40,7 +40,7 @@
                 echo '</p>';
                 echo "</form>";
                 echo '<button id="viewComments">View Comment</button>';
-                echo '<button id="submit">"Submit Comment"</button>';
+                echo '<button id="submit">Submit Comment</button>';
                 
                 echo "<div id='retrievedComments'>";
                 echo"</div>";
