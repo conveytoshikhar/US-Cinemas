@@ -20,7 +20,7 @@
 
                 $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
                     or die("Error is "+mysqli_connect_error());
-
+                    
                 $query="SELECT * FROM film";    
                 $film_records=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
                 
