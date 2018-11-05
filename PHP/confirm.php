@@ -116,7 +116,7 @@
 
                 }
                 $_SESSION['ticketsFee']=$ticketsFee;
-                echo "<h3> Total Fee: $totalFee</h3>";
+                echo "<h3> Total Fee: \$$totalFee</h3>";
                 echo "<hr>";
                 echo "Please present valid proof of age/status when purchasing Student or Senior tickets before entering the cinema house";
                 echo "<br>";

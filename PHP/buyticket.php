@@ -32,16 +32,23 @@
 
                 echo "<form action='confirm.php' method='POST'>";
                 echo "<table>";
+                $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
+                or die("Error is "+mysqli_connect_error());
                 for($i=0;$i<count($seats);$i++){
                     echo '<tr>';
                     $seat_value=$seats[$i];
-                    echo "<td> $seat_value </td>";
+                    
+
+
+                    echo "<td> $seat_value</td>";
                     echo '<td>';
                     echo "<select name='$seat_value' size='1'>";
                     echo '<option value="adult"> Adult ($75) </option>';
                     echo '<option value="student/senior"> Student/Senior ($50) </option>';
                     echo '</select>';
                     echo "</td>";
+
+                   
 
                 }
                 echo "</table>";

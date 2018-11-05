@@ -61,17 +61,29 @@
                 $rows=$house_items['houserow'];
                 $columns=$house_items['housecol'];
 
-
+                $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
+                or die("Error is "+mysqli_connect_error());
+                
                 echo "<form action='buyticket.php' method='POST'>";
                 echo '<table id="seatingPlan" style="border: 1px solid black">';
                 for($r=$rows;$r>=1;$r--){
                     echo '<tr>';
                     for($c=1;$c<=$columns;$c++){
                         echo '<td>';
-                        echo '<div">';
+                       
                         $rowAlphabet=getRowsAlphabet($r); 
-                        echo "<input type='checkbox' name='seat[]' value='$rowAlphabet$c'>";
-                        echo "<p> $rowAlphabet$c </p>";
+                        $seat="$rowAlphabet$c";
+                        $query="SELECT * FROM ticket where seat='$seat' AND broadcastid='$broadcast_id'";
+                        $result=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
+                        if(mysqli_num_rows($result)>0){
+                            //this means there are booked tickets
+                            echo '<div id="booked">';
+                            echo "<p>Sold</p>";
+                            echo "<p> $seat</p>";
+                        }else{
+                            echo "<input type='checkbox' name='seat[]' value='$seat'>";
+                            echo "<p> $rowAlphabet$c </p>";
+                        }
                         echo '</div>';
                         echo '</td>';
                     }
