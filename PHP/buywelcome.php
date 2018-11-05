@@ -51,6 +51,7 @@
                             echo "<form id='form' method='POST' action='seatplantry.php'>";
                             echo '<select name="chosen" size="1">';
                             while($broad_item=mysqli_fetch_array($broadcast_items)){
+                                $broadcast_id=$broad_item['id'];
                                 $houseid=convertHouseName($broad_item['houseid']);
                                 $date=$broad_item['date'];
                                 $filmname=$film['filmname'];
@@ -58,7 +59,7 @@
                                 $time=$broad_item['time'];
                                 $day=$broad_item['day'];
                                 $displayitem= $date." ".$time." (".$day.") "."House ".$houseid;
-                                echo "<option  value='date=$date&time=$time&film=$filmname&house=$houseid&category=$category&day=$day' >".$displayitem.'</option>';
+                                echo "<option  value='$broadcast_id' >".$displayitem.'</option>';
                             }
                             echo '</select>';
                             echo '<input type="submit" value="submit">';
