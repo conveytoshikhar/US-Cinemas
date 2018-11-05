@@ -38,7 +38,16 @@
 
                 $filmName=$film['filmname'];
                 $filmCategory=$film['category'];
-              
+                $_SESSION['houseName']=$house;
+                $_SESSION['houseID']=$houseid;
+                $_SESSION['filmName']=$filmName;
+                $_SESSION['filmId']=$filmId;
+                $_SESSION['category']=$filmCategory;
+                $_SESSION['day']=$day;
+                $_SESSION['date']=$date;
+                $_SESSION['time']=$time;
+                $_SESSION['broadcastID']=$broadcast_id;
+                
                 echo "<h1>Ticketing</h1>";
                 echo "<h3> Cinema:      US</h3>";
                 echo "<h3> House:       $house</h3>";
@@ -51,15 +60,17 @@
                 $house_items=mysqli_fetch_array($house_object);
                 $rows=$house_items['houserow'];
                 $columns=$house_items['housecol'];
+
+
                 echo "<form action='buyticket.php' method='POST'>";
                 echo '<table id="seatingPlan" style="border: 1px solid black">';
-                for($r=1;$r<=$rows;$r++){
+                for($r=$rows;$r>=1;$r--){
                     echo '<tr>';
                     for($c=1;$c<=$columns;$c++){
                         echo '<td>';
                         echo '<div">';
-                        $rowAlphabet=getRowsAlphabet($r);
-                        echo "<input type='checkbox' name='seat' value='$rowAlphabet&$c'>";
+                        $rowAlphabet=getRowsAlphabet($r); 
+                        echo "<input type='checkbox' name='seat[]' value='$rowAlphabet$c'>";
                         echo "<p> $rowAlphabet$c </p>";
                         echo '</div>';
                         echo '</td>';
