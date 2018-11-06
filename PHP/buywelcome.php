@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy A Ticket</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/headerStyling.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/buywelcomeStyling.css">
+
   </head>
 
   <body>
@@ -11,12 +15,15 @@
             session_start();
             
             if(isAuthenticated()){
+                echo "<header>";
                 echo "<ul>";
                 echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
                 echo "<li><a href='comment.php'>Movie Review</a></li>";
                 echo "<li><a href='history.php'>Purchase History</a></li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
-                echo "<ul>";
+                echo "</ul>";
+                echo "</header>";
+
 
                 $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
                     or die("Error is "+mysqli_connect_error());
@@ -26,22 +33,23 @@
                 
                 if(mysqli_num_rows($film_records)>0){
                     while($film=mysqli_fetch_array($film_records)){
-                        echo "<div id='cardview'> ";
-                        echo "<p>";
-                        echo "Title: ".$film['filmname'];
-                        echo "</p>";
+                        echo "<section> ";
                         echo "<img src='../Assets/".$film['poster']."' alt='image poster'/>";
+                        echo "<div>";
                         echo "<p>";
-                        echo "Synopsis: ".$film['description'];
+                        echo "<span>Title:</span> ".$film['filmname'];
                         echo "</p>";
                         echo "<p>";
-                        echo "Director: ".$film['director'];
+                        echo "<span>Synopsis:</span> ".$film['description'];
                         echo "</p>";
                         echo "<p>";
-                        echo "Category: ".$film['category'];
+                        echo "<span>Director:</span> ".$film['director'];
                         echo "</p>";
                         echo "<p>";
-                        echo "Language: ".$film['languageFilm'];
+                        echo "<span>Category:</span> ".$film['category'];
+                        echo "</p>";
+                        echo "<p>";
+                        echo "<span>Language:</span> ".$film['languageFilm'];
                         echo "</p>";
 
                         // here the show timings will go for the current movie
@@ -62,11 +70,12 @@
                                 echo "<option  value='$broadcast_id' >".$displayitem.'</option>';
                             }
                             echo '</select>';
-                            echo '<input type="submit" value="submit">';
+                            echo '<input type="submit" value="Submit">';
                             echo '</form>';
+                            echo '</div>';
                         }
 
-                        echo "</div>";
+                        echo "</section>";
                         
                         echo "<hr>";
 

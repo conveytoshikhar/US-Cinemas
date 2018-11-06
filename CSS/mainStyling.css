@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 *{
     margin:0px;
     padding:0px;
@@ -7,6 +8,8 @@ body{
     background-image: url('../Assets/mainPHPBackground.jpg');
     background-repeat: no-repeat;
     background-color:black;
+    width: 100vw;
+    height: 100vh;
     background-attachment: fixed;
     font-family: 'Raleway',sans-serif;
     background-size: cover;
@@ -14,21 +17,49 @@ body{
 }
 
 
-ul{
-    width: 60vw;
-    background: red;
-}
-li{
-    width:15vw;
-    background:pink;
+
+h1{
+    font-size: 2.5rem;
+    color:white;
+    text-align: center;
 }
 
-header{
-    width:100vw;
-    height:10vh;
-    position: abosolute;
-    left: 0px;
-    right:0px;
-    top:0px;
+
+#content{
     background-color:rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 100vw;
+    margin-top:20vh;
 }
+
+
+
+
+@media only screen and (max-width:1250px){
+    h1{
+        font-size: 1.r5em;
+        color:white;
+        text-align: center;
+    }
+    
+}
+
+
+@media only screen and (max-width:950px){
+    h1{
+        font-size: 1rem;
+        color:white;
+        text-align: center;
+    }
+     
+}
+
+@media only screen and (max-width:400px){
+    h1{
+        font-size: 0.75rem;
+        color:white;
+        text-align: center;
+    }
+    
+}
+
