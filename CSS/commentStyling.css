@@ -1,0 +1,93 @@
+*{
+    margin:0 px;
+    padding:0 px;
+    box-sizing: border-box;
+    font-family: 'Raleway',sans-serif;
+}
+body{
+    background-image: url('../Assets/commentsBackground.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+    color:black;
+    background-size: cover;
+    background-position: center; 
+    vertical-align: middle;
+}
+
+select{
+    width: 35vw;
+    height:1.5rem;
+    font-size: 1rem;
+    border: 2px solid #DB7093;
+    text-align-last:center;
+}
+#film_container{
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    margin-top:10vh;
+}
+
+
+label{
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+textarea{
+    width:50vw;
+    margin-left:25vw;
+    margin-top:20px;
+    height:30vh;
+    font-size:1rem;
+    color:black;
+}
+
+button{
+    width: 20vw;
+    height: 2rem;
+    font-size: 1rem; 
+    color: white;
+    background: rgba(0,0,0,0);
+    border:1px solid white;
+}
+button:hover{
+    opacity:0.5;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+}
+
+
+#retrievedComments{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left:20vw;
+    margin-top:40px;
+    padding-right:20vw;
+}
+
+
+#commentSection>p{
+    color:white;
+    margin-top:8px;
+    margin-bottom:8px;
+
+}
+span{
+    font-weight: bold;
+}

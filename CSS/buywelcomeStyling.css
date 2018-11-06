@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    margin:0 px;
+    padding:0 px;
+    box-sizing: border-box;
+    font-family: 'Raleway',sans-serif;
+}
+body{
+    background-image: url('../Assets/buywelcomeBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+    color:black;
+    background-size: cover;
+    background-position: center; 
+    vertical-align: middle;
+}
+
+
+
+
+section{
+    color:white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top:12px;
+    margin-bottom:12px;
+}
+section>img{
+    margin-right:18px;
+    width:200px;
+    height: 250px;
+}
+section>div>p{
+    margin-bottom: 8px;
+}
+section>div>form{
+    margin-top:8px;
+}
+
+span{
+    font-weight:bold;
+    font-size: 1rem;
+}
+
+
+input{
+    margin-left:18px;
+    height:2rem;
+    font-weight: bold;
+    font-size:1rem;
+    width:20vw;
+    font-family: 'Raleway',sans-serif;
+    border: 2px solid #DB7093; 
+
+}
+input:hover{
+    opacity:0.6;
+}
+select{
+    height: 2rem;
+    font-size:1rem;
+    width:30vw;
+    border:2px solid #DB7093;
+    text-align-last:center;
+}
+select>option{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:1250px){
+   
+    
+}
+
+
+@media only screen and (max-width:950px){
+   
+}
+
+@media only screen and (max-width:950px){
+    section{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-top:12px;
+        margin-bottom:12px;
+    }
+    section>img{
+        width:200px;
+        height: 250px;
+    }
+    section>div{
+        padding:10px;
+    }
+    section>div>p{
+        margin-bottom: 4px;
+        margin-top:4px;
+    }
+    section>div>form{
+        margin-top:8px;
+    }
+    
+    span{
+        font-weight:bold;
+        font-size: 1rem;
+    }
+    
+    
+    
+    select{
+        height: 2rem;
+        font-size:1rem;
+        width:90vw;
+        border:2px solid #DB7093;
+        display: block;
+        text-align-last:center;
+    }
+    input{
+        height:2rem;
+        font-size:1rem;
+        width:90vw;
+        left:0px;
+        font-family: 'Raleway',sans-serif;
+        border: 2px solid #DB7093; 
+        margin-left:0px;
+        margin-top:8px;
+    }
+    
+    
+    
+    
+}
+

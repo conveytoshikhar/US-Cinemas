@@ -31,7 +31,7 @@
                 echo "<h1>Have an awesome experience at US CINEMAS...</h1>";
                 echo "</div>";
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h2> You have not logged in. </h2>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

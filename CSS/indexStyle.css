@@ -56,7 +56,9 @@ button{
     font-size: 1rem; 
     color: whitesmoke;
 }
-
+button:hover{
+    opacity:0.5;
+}
 #submit{
     position: absolute;
     bottom: 1rem;

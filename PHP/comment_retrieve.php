@@ -16,8 +16,10 @@
                     $counter++;
                     $viewer = $comment['userid'];
                     $commentDescription = $comment['comment'];
-                    echo "<p> Viewer: $viewer </p>";
-                    echo "<p> Comment: $commentDescription </p>";
+                    echo "<section id='commentSection'>";
+                    echo "<p> <span>Viewer:</span> $viewer </p>";
+                    echo "<p> <span>Comment:</span> $commentDescription </p>";
+                    echo "</section>";
                     echo "<hr>";
                 }
             }
@@ -26,7 +28,9 @@
             
         }
         if($counter==0){
-            echo "No Comments posted yet..";
+            echo "<section id='commentSection'>";
+            echo "<p>No Comments posted yet..</p>";
+            echo "</section>";
         }
     
     }
