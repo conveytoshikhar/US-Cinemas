@@ -3,6 +3,8 @@
   <head>
   <meta charset="utf-8"/>
     <title>Choose a seat.</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/seatPlantryStyling.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
@@ -48,12 +50,14 @@
                 $_SESSION['time']=$time;
                 $_SESSION['broadcastID']=$broadcast_id;
                 
-                echo "<h1>Ticketing</h1>";
+                echo "<h1 id='main-heading'>Ticketing</h1>";
+                echo "<div class='top-info'>";
                 echo "<h3> Cinema:      US</h3>";
                 echo "<h3> House:       $house</h3>";
                 echo "<h3> Film:        $filmName</h3>";
                 echo "<h3> Category:    $filmCategory</h3>";
                 echo "<h3> Show Time:   $date ($day) $time</h3>";
+                echo "</div>";
 
                 $query="SELECT * FROM house where id='$houseid'";
                 $house_object=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
@@ -69,7 +73,7 @@
                 for($r=$rows;$r>=1;$r--){
                     echo '<tr>';
                     for($c=1;$c<=$columns;$c++){
-                        echo '<td>';
+                        
                        
                         $rowAlphabet=getRowsAlphabet($r); 
                         $seat="$rowAlphabet$c";
@@ -77,25 +81,34 @@
                         $result=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
                         if(mysqli_num_rows($result)>0){
                             //this means there are booked tickets
-                            echo '<div id="booked">';
+                            echo '<td id="booked">';
                             echo "<p>Sold</p>";
                             echo "<p> $seat</p>";
+
                         }else{
+                            echo '<td id="free">';
+                            echo '<div class="inner-free">';
                             echo "<input type='checkbox' name='seat[]' value='$seat'>";
                             echo "<p> $rowAlphabet$c </p>";
+                            echo '</div>';
+
                         }
-                        echo '</div>';
                         echo '</td>';
                     }
                     echo '</tr>';
                 }
                 echo '</table>';
-                echo '<input type="submit" value="Submit">';
+                echo '<div id="screen">';
+                echo '<p>SCREEN</p>';
+                echo '</div>';
+                echo '<input id="submit" type="submit" value="Submit">';
                 echo '</form>';
+                echo "<div id ='cancel-btn'>";
                 echo '<button id="cancel">Cancel</button>';
+                echo "</div>";
                 
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

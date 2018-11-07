@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    font-family: 'Roboto';
+    color: white;
+}
+
+body{
+    background-image: url('../Assets/buyTicketBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+    background-position: center;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+table{
+    border: 1px solid white;
+    width: 65vw;
+    min-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2{
+    font-size:2rem;
+    font-weight: bold;
+    width: 65vw;
+    min-width: 400px;
+    margin: 20px auto;
+}
+
+hr{
+    width: 65vw;
+    min-width: 400px;
+    margin:20px auto;
+}
+
+
+p{
+    width: 65vw;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+button{
+    width: 25vw;
+    height: 3rem;
+    font-size: 1.3rem;
+    min-width: 150px;
+    padding: 4px;
+    background: rgba(0,0,0,0);
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    margin: 20px auto;
+}
+
+button:hover{
+    opacity: 0.5;
+}
+
+
+
+@media (max-width: 450px){
+    
+
+ 
+
+
+    table{
+        min-width: 350px;
+    }
+
+    h2{
+        min-width: 350px;
+    }
+
+    hr{
+        min-width: 350px;
+    }
+
+
+    p{
+        min-width: 350px;
+    }
+
+    button{
+        width: 25vw;
+        height: 3rem;
+        font-size: 1.3rem;
+        min-width: 150px;
+        padding: 4px;
+        background: rgba(0,0,0,0);
+        border: 1px solid lightgreen;
+        color: lightgreen;
+        margin: 20px auto;
+    }
+
+    #notLoggedIn{
+        color:white;
+        font-size:2rem;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+}

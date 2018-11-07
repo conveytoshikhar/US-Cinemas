@@ -73,6 +73,7 @@
                             echo '<input type="submit" value="Submit">';
                             echo '</form>';
                             echo '</div>';
+                        
                         }
 
                         echo "</section>";
@@ -82,8 +83,9 @@
                     }
                 }
 
+
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1  id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           
@@ -109,6 +111,16 @@
             }
         ?>
 
+       
+    
     </body>
 
+    <script>
+    window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+    }
+    </script>
 </html>

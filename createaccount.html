@@ -6,24 +6,33 @@
     <title>Create Account</title>
     <link href="CSS/createAccount.css" rel="stylesheet" type="text/css">
   </head>
-
+ 
   <body>
+      <div id="main-content">
         <h1>Welcome To US Cinemas, Lets get you signed up..</h1>
         <!-- inner card view for login and password and the two buttons  -->
         <div id="innerCardView">
           <form id="form" method="POST" action="./PHP/create.php">
+              <div class="form-item">
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="username" placeholder="Desired Username">
+              </div>
+              
 
-              <label for="username">Username:</label>
-              <input id="username" type="text" name="username" placeholder="Desired Username">
-
-              <br><br>
-              <label for="password">Password:</label>
-              <input id="password" type="password" name="password" placeholder="Your Password">
+              <div class="form-item">
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password" placeholder="Your Password">  
+              </div>
+              
 
           </form>
-          <button id="signUp">Sign Up</button><br/>
-          <button id="back">Back</button>
+          <div class="buttons">
+            <button id="signUp">Sign Up</button>
+            <button id="back">Back</button>
+          </div>
+          
         </div>
+
 
 
 

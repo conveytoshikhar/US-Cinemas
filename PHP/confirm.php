@@ -3,6 +3,10 @@
   <head>
   <meta charset="utf-8"/>
     <title>US Cinemas</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/headerStyling.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/headerStyling.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/confirmStyling.css">
   </head>
 
   <body>
@@ -35,13 +39,14 @@
                     }
 
                 }else{
-                echo "<ul>";
-                echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
-                echo "<li><a href='comment.php'>Movie Review</a></li>";
-                echo "<li><a href='history.php'>Purchase History</a></li>";
-                echo "<li><a href='logout.php'>Logout</a></li>";
-                echo "<ul>";
-
+                    echo "<header>";
+                    echo "<ul>";
+                    echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
+                    echo "<li><a href='comment.php'>Movie Review</a></li>";
+                    echo "<li><a href='history.php'>Purchase History</a></li>";
+                    echo "<li><a href='logout.php'>Logout</a></li>";
+                    echo "</ul>";
+                    echo "</header>";
 
                 //first get ticket price details for selected seats
                 $seats=$_SESSION['seats'];
@@ -64,7 +69,7 @@
                 echo "<h1>  Order Information </h1>";
                 $totalFee=0;
                 for($i=0;$i<count($ticketsType);$i++){
-                    echo "<table style='border:1px solid black'>";
+                    echo "<table>";
                     echo '<tr>';
                     echo "<td>";
                     echo "<h3> Cinema:      US</h3>";
@@ -116,15 +121,15 @@
 
                 }
                 $_SESSION['ticketsFee']=$ticketsFee;
-                echo "<h3> Total Fee: \$$totalFee</h3>";
+                echo "<h2> Total Fee: \$$totalFee</h2>";
                 echo "<hr>";
-                echo "Please present valid proof of age/status when purchasing Student or Senior tickets before entering the cinema house";
+                echo "<p>Please present valid proof of age/status when purchasing Student or Senior tickets before entering the cinema house</p>";
                 echo "<br>";
                 echo '<button id="ok">OK</button>';
                 }
                 
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

@@ -3,6 +3,9 @@
   <head>
   <meta charset="utf-8"/>
     <title>US Cinemas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/headerStyling.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/historyStyling.css">
   </head>
 
   <body>
@@ -11,12 +14,14 @@
             session_start();
             
             if(isAuthenticated()){
+                echo "<header>";
                 echo "<ul>";
                 echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
                 echo "<li><a href='comment.php'>Movie Review</a></li>";
                 echo "<li><a href='history.php'>Purchase History</a></li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
-                echo "<ul>";
+                echo "</ul>";
+                echo "</header>";
 
                 $userid=$_SESSION['username'];
                 $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
@@ -54,23 +59,27 @@
                         $language=$film['languageFilm'];
                     
 
-                        echo "<p> Ticket Id: $ticketId, $fee ($type) </p>";
-                        echo "<p> House: $housename </p>";
-                        echo "<p> Seat: $seat </p>";
-                        echo "<p> Film Name: $filmName </p>";
-                        echo "<p> Language: $language </p>";
-                        echo "<p> Date: $date ($day) $time  </p>";
+                        echo "<p> <span>Ticket Id: </span> $ticketId, $fee ($type) </p>";
+                        echo "<p> <span>House:</span> $housename </p>";
+                        echo "<p> <span>Seat: </span> $seat </p>";
+                        echo "<p> <span>Film Name: </span>$filmName </p>";
+                        echo "<p> <span>Language: </span>$language </p>";
+                        echo "<p> <span>Date: </span>$date ($day) $time  </p>";
 
                         echo "</div>";
                         echo "<hr>";
 
                     }
+                }else{
+                    echo "<div id='noDetails'>";
+                    echo "<h2> Sorry, No Purchase Records Found ... </h2> ";
+                    echo '</div>';
                 }
               
 
 
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

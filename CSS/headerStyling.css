@@ -8,19 +8,19 @@ body{
     font-family: 'Raleway',sans-serif;
 }
 ul{
-    width: 60vw;
+    width: 60%;
+    height: 90px;
     position: absolute;
     right:0px;
     top:0px;
-    height: auto;
 }
 li{
     display: inline-block;
-    width:15vw;
-    height:10vh;
-    padding-top:3.75vh;
+    width:25%;
+    height: 100%;
     font-size:1.5rem;
     text-align: center;
+    padding-top:24px;
 }
 li:hover{
     background: rgba(0,0,0,0.3);
@@ -35,7 +35,7 @@ a:link{
 }
 header{
     width:100vw;
-    height:10vh;
+    height:90px;
     left: 0px;
     right:0px;
     top:0px;
@@ -43,78 +43,48 @@ header{
 }
 
 
-@media only screen and (max-width:1250px){
-    li{
-        display: inline-block;
-        width:15vw;
-        height:6vh;
-        padding-top:2vh;
-        font-size:1.13rem;
-        font-weight: bold;
-        text-align: center;
+@media only screen and (max-width:1300px){
+    ul{
+        width: 100%;
+        height: 90px;
     }
     header{
-        width:100vw;
-        height:6vh;
-        left: 0px;
-        right:0px;
-        top:0px;
-        background-color:rgba(255, 255, 255, 0.1);
+        height: 90px;
     }
 }
 
 
 @media only screen and (max-width:950px){
-        ul{
-            width: 100vw;
-            position: absolute;
-            right:0px;
-            top:0px;
-            height: auto;
-        }
     li{
-        display: inline-block;
-        width:25vw;
-        height:6vh;
-        padding-top:2vh;
-        font-size:0.69rem;
-        font-weight: bold;
-        text-align: center;
+        font-size:17px;
+        padding-top:20px;
     }
     header{
-        width:100vw;
-        height:6vh;
-        left: 0px;
-        right:0px;
-        top:0px;
-        background-color:rgba(255, 255, 255, 0.1);
+        height: 70px;
+    }
+    ul{
+        height: 70px;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+    li{
+        font-size:13px;
+        padding-top: 30px;
     }
 }
 
-@media only screen and (max-width:400px){
-    ul{
-        width: 100vw;
-        position: absolute;
-        right:0px;
-        top:0px;
-        height: auto;
-    }
+@media only screen and (max-width:450px){
     li{
-        display: inline-block;
-        width:25vw;
-        height:6vh;
-        padding-top:1vh;
-        font-size:0.4rem;
-        text-align: center;
+        font-size:9px;
+        padding-top: 20px;
     }
     header{
-        width:100vw;
-        max-width: 100%;
-        height:5vh;
-        left: 0px;
-        right:0px;
-        top:0px;
-        background-color:rgba(255, 255, 255, 0.1);
+        height: 50px;
+    }
+    ul{
+        height:50px;
     }
 }
 

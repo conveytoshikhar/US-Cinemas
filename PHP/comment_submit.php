@@ -3,6 +3,8 @@
   <head>
   <meta charset="utf-8"/>
     <title>US Cinemas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/commentSubmitStyling.css">
   </head>
 
   <body>
@@ -19,13 +21,13 @@
                 $query="INSERT INTO commentstable (filmid,userid,comment) VALUES ($tempString)";
                 $result=mysqli_query($db_conn,$query) or die("Query Error! ".mysqli_error($db_conn) );
                 if($result==1){
-                    echo "<h1> Your comment has been submitted </h1>";
+                    echo "<h1> Your comment has been submitted... Please wait!</h1>";
                     echo "<script> setTimeout(  ()=>{window.location.replace('comment.php')}  , 3000) </script>"; 
                 }
 
 
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>"; 
             }
 

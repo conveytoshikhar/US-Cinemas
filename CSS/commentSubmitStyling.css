@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    font-family: 'Roboto';
+    color: white;
+}
+
+body{
+    background-image: url('../Assets/commentSubmitedBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+h1{
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+

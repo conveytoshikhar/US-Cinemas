@@ -20,9 +20,8 @@
                 echo "<li><a href='comment.php'>Movie Review</a></li>";
                 echo "<li><a href='history.php'>Purchase History</a></li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
-                echo "<ul>";
+                echo "</ul>";
                 echo "</header>";
-
 
 
                 $db_conn=mysqli_connect('sophia.cs.hku.hk','andelwal','Shikhar1','andelwal') 
@@ -55,7 +54,7 @@
 
                    
             }else{
-                echo "<h1> You have not logged in. </h1>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

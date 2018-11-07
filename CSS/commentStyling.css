@@ -14,7 +14,12 @@ body{
     background-position: center; 
     vertical-align: middle;
 }
-
+#notLoggedIn{
+    color:white;
+    font-size:2rem;
+    text-align: center;
+    margin-top: 40px;
+}
 select{
     width: 35vw;
     height:1.5rem;
@@ -27,7 +32,6 @@ select{
     background: rgba(0,0,0,0.3);
     display: flex;
     justify-content: center;
-    margin-top:10vh;
 }
 
 
@@ -90,4 +94,36 @@ button:hover{
 }
 span{
     font-weight: bold;
+}
+
+
+@media(max-width: 480px){
+    textarea{
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+        padding: 10px;
+    }
+
+    #buttons button{
+        width: 150px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    #retrievedComments{
+        padding: 0;
+        width: 80%;
+        margin: 20px auto;
+    
+    }
+
+    #film_container{
+        margin-top: 0px
+    }
+    
+    #selector{
+        width: 70%
+    }
 }

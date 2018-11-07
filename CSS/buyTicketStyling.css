@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    font-family: 'Roboto';
+    color: white;
+}
+
+body{
+    background-image: url('../Assets/buyTicketBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+    background-position: center;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-info {
+    border: 1px solid whitesmoke;
+    padding: 12px;
+    width: 65vw;
+    min-width:300px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+table{
+    width: 65vw;
+    min-width:300px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+form{
+    width: 65vw;
+    min-width:300px;
+    margin: 0px auto;
+    text-align: center;
+}
+td#seat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 8px;
+ 
+}
+select#ticket-value {
+    font-size: 1.3rem;
+    height: 2rem;
+    background: whitesmoke;
+    text-align-last: center;
+    border-radius: 8px;
+    color: black;
+    border:1px solid indianred;
+}
+
+
+#submit{
+    width:300px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid lightgreen;
+    border-radius:4px;
+    font-size:1.3rem;
+    color: lightgreen;
+    margin-top:40px;
+    padding: 9px;
+}
+
+
+#submit:hover{
+    opacity:0.5;
+}
+
+#cancel{
+    width: 300px;
+    height: 3rem;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid lightcoral;
+    color: lightcoral;
+    border-radius:4px;
+    padding: 9px;
+    font-size:1.3rem;
+    margin: 20px auto;
+}
+
+
+button:hover{
+    opacity: 0.5;
+}
+
+
+h1#cart{
+    text-align: center;
+}
+#notLoggedIn{
+    color:white;
+    font-size:2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 450px){
+    body{
+        max-width: 98%;
+    }
+    .top-info {
+        border: 1px solid whitesmoke;
+        padding: 12px;
+        width: 80%;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+
+
+
+     
+}
+
+
+

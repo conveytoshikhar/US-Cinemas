@@ -21,7 +21,7 @@
                 echo "<li><a href='comment.php'>Movie Review</a></li>";
                 echo "<li><a href='history.php'>Purchase History</a></li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
-                echo "<ul>";
+                echo "</ul>";
                 echo "</header>";
 
 
@@ -31,7 +31,7 @@
                 echo "<h1>Have an awesome experience at US CINEMAS...</h1>";
                 echo "</div>";
             }else{
-                echo "<h2> You have not logged in. </h2>";
+                echo "<h1 id='notLoggedIn'> You have not logged in. </h1>";
                 echo "<script> setTimeout(  ()=>{window.location.replace('../index.html')}  , 3000) </script>";
             }
           

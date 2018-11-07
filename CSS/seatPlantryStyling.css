@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    font-family: 'Roboto',sans-serif;
+    font-weight: normal;
+}
+body{
+    background-image: url('../Assets/seatPlantryBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+    color:black;
+    background-size: cover;
+    background-position: center; 
+    vertical-align: middle;
+}
+
+#main-heading{
+    color:white;
+    font-size:2rem;
+    text-align: center;
+}
+table{
+    width: 65vw;
+    margin: 0 auto;
+    border: 1px solid black;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    border-radius: 4px;
+}
+#notLoggedIn{
+    color:white;
+    font-size:2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.top-info {
+    border: 1px solid white;
+    padding: 12px;
+    width: 65vw;
+    box-sizing: border-box;
+    margin: 30px auto;
+    color: white;
+}
+
+@media (max-width: 450px){
+    .top-info {
+        border: 1px solid white;
+        padding: 12px;
+        width: 95%;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+     
+}
+#screen{
+    width: 65vw;
+    height: 40px;
+    margin: 0 auto;
+    background: #fb3131;
+    border: 1px solid black;
+    border-top: none;
+    box-sizing: border-box;
+    color: white;
+
+    
+}
+
+#screen p{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+    
+td{
+    width: 40px;
+}
+
+
+
+#booked {
+    text-align: center;
+}
+
+div.inner-free {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    height: 13px;
+    margin-top: 18px;
+}
+
+button{
+    width: 40vw;
+    min-width: 200px;
+    height: 2rem;
+    font-size: 1rem; 
+    color: whitesmoke;
+}
+button:hover{
+    opacity:0.5;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#submit{
+    background: rgba(0,0,0,0);
+    color:lightgreen;
+    border:1px solid green;
+    border-radius: 4px;
+    width: 40vw;
+    min-width: 200px;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 4px;
+    margin: 20px auto;
+}
+
+#submit:hover{
+    opacity: 0.5;
+}
+#cancel-btn{
+    text-align:center;
+}
+#cancel{
+    background: rgba(0,0,0,0);
+    color:lightcoral;
+    border:1px solid lightcoral;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    padding: 4px;
+    height: 3rem;
+    margin: 0px auto;
+}
+
+#booked{
+    border:1px solid red;
+}
+
+#free{
+    border:1px solid green;
+}
+
+
+#notLoggedIn{
+    color:white;
+    font-size:3rem;
+    text-align: center;
+
+}
+@media(max-width: 480px){
+    table{
+        min-width: 95%;
+
+    }
+
+    #screen{
+        min-width: 95%;
+    }
+}
+
