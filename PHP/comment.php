@@ -16,7 +16,7 @@
             if(isAuthenticated()){
                 echo "<header>";
                 echo "<ul>";
-                echo "<li><a href='buywelcome.php'>Buy a Ticket</a></li>";
+                echo "<li><a href='buywelcome.php'>Bauy a Ticket</a></li>";
                 echo "<li><a href='comment.php'>Movie Review</a></li>";
                 echo "<li><a href='history.php'>Purchase History</a></li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
